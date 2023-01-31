@@ -4,7 +4,7 @@ const filtr_options = ['name', 'capital', 'population', 'flags', 'languages'];
 const start_url = 'https://restcountries.com/v2/name/';
 
 function fetchCountries(name) {
-  trimmed_name = name.trim();
+  const trimmed_name = name.trim();
 
   let filtr = filtr_options.toString();
 
