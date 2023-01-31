@@ -8,8 +8,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
+  background-image: url('../images/background.jpg');
   color: #212121;
   line-height: 1.5;
+  list-style: none;
 }
 
 #search-box {
@@ -17,4 +19,22 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+}
+
+.country-list {
+  padding-left: 0px;
+}
+.country-list__item {
+  display: flex;
+  width: 400px;
+  background-color: #fffff0;
+  padding-left: 8px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 1px #212121;
+}
+.country-list__flag {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  align-self: center;
 }
