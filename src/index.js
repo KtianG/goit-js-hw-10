@@ -66,6 +66,8 @@ const handleInput = () => {
   */
 
   if (input.value.length === 0) {
+    country_list.style.display = 'none';
+    country_info.style.display = 'none';
     return;
   }
   fetchCountries(input.value)
@@ -90,6 +92,8 @@ const handleInput = () => {
         country_list.innerHTML = listMarkupFromData(data);
       } else {
         //Displaying notification of too many matches
+        country_list.style.display = 'none';
+        country_info.style.display = 'none';
         Notify.info(
           'Too many matches found. Please enter a more specific name.'
         );
@@ -97,6 +101,8 @@ const handleInput = () => {
     })
     .catch(error => {
       console.log(error);
+      country_list.style.display = 'none';
+      country_info.style.display = 'none';
       Notify.failure('Oops, there is no country with that name');
     });
 };
